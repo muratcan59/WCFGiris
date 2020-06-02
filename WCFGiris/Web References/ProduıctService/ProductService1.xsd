@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfProductDT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductDT" nillable="true" type="tns:ProductDT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductDT" nillable="true" type="tns:ArrayOfProductDT" />
+  <xs:complexType name="ProductDT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeleteDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Discount" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Stock" type="xs:int" />
+      <xs:element minOccurs="0" name="Tax" type="xs:double" />
+      <xs:element minOccurs="0" name="UpdateDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductDT" nillable="true" type="tns:ProductDT" />
+</xs:schema>
